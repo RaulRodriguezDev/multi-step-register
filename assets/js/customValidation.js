@@ -1,4 +1,4 @@
-import { globalElements } from "./models.js"
+import { globalElements, stepTwoValues } from "./models.js"
 
 const createLiElement = ( message, id ) => {
     const li = document.createElement('li')
@@ -40,4 +40,17 @@ const validateEmail = ( emailInput ) => {
     
 }
 
-export { validateUserName, validateEmail }
+const validateTopicSelected = () => {
+    const options = Object.values(stepTwoValues)
+
+    if(options.every(option => !option)) {
+        globalElements.errorList.append(createLiElement('Select at least one topic', 'topic-error'))
+        return false
+    }
+    else {
+        globalElements.errorList.querySelector('#topic-error')?.remove()
+        return true
+    }
+}
+
+export { validateUserName, validateEmail, validateTopicSelected }

@@ -9,7 +9,7 @@ const stepOneValues = {
 
 const stepTwoValues = {
     'softwareDevelopment': false,
-    'userPreferences': false,
+    'userExperience': false,
     'graphicDesign': false,
 }
 

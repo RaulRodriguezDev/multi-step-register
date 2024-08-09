@@ -12,7 +12,7 @@
     <main class="layout">
         <section class="card-container">
             <div class="card-content">
-                <h4 id="card-title">Step Title</h4>
+                <h4 id="card-title"></h4>
                 <ul id="error-list"></ul>
                 <form id="card-step-one">
                     <div class="field-section step-one">
@@ -23,7 +23,9 @@
                         <p>Email</p>
                         <input type="text" name="email" id="email" placeholder="example@gmail.com">
                     </div>
-                    <button type="submit" class="button-container">Continue</button>
+                    <div class="button-container" style="display:flex; justify-content:center;">
+                        <button type="submit" class="button-container">Continue</button>
+                    </div>
                 </form>
                 <form id="card-step-two" class="hidden">
                     <div class="field-section step-two">
@@ -31,8 +33,16 @@
                         <input type="text" name="userExperience" id="userExperience" value="User Experience" readonly>
                         <input type="text" name="graphicDesign" id="graphicDesign" value="Graphic Design" readonly>
                     </div>
-                    <button id="step-one-button" type="submit" class="button-container">Continue</button>
+                    <div class="button-container" style="display:flex; justify-content:center;">
+                        <button type="submit" class="button-container">Continue</button>
+                    </div>
                 </form>
+                <div class="hidden" id="card-step-three">
+                    <p>Thank you for registering</p>
+                    <div class="button-container" style="display:flex; justify-content:center;">
+                        <button type="submit" class="button-container">Continue</button>
+                    </div>
+                </div>
             </div>
         </section>
         <div class="stepper-container">

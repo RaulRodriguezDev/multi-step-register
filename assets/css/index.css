@@ -93,19 +93,23 @@ html {
 }
 
 .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+.button-container button {
     align-self: center;
     border: none;
     font-family: inherit;
     font-size: 0.875rem;
     padding: 14px 38px;
-    margin-top: 12px;
-    margin-bottom: 20px;
     border-radius: 25px;
     color: var(--font-color);
     background: linear-gradient(to bottom, var(--button-secondary-color), var(--button-primary-color)  90%);
 }
 
-.button-container:hover {
+.button-container button:hover {
     background: linear-gradient(to bottom, var(--button-primary-color), var(--button-secondary-color) 90%);
     cursor: pointer;
 }
