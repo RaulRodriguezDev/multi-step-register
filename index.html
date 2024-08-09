@@ -12,7 +12,8 @@
     <main class="layout">
         <section class="card-container">
             <div class="card-content">
-                <h4>Step Title</h4>
+                <h4 id="card-title">Step Title</h4>
+                <ul id="error-list"></ul>
                 <form id="card-step-one">
                     <div class="field-section step-one">
                         <p>Name</p>
@@ -22,26 +23,22 @@
                         <p>Email</p>
                         <input type="text" name="email" id="email" placeholder="example@gmail.com">
                     </div>
+                    <button type="submit" class="button-container">Continue</button>
                 </form>
-                <form id="card-step-two">
+                <form id="card-step-two" class="hidden">
                     <div class="field-section step-two">
-                        <input type="text" name="name" id="name" value="Software Development" readonly>
-                        <input type="text" name="name" id="name" value="User Experience" readonly>
-                        <input type="text" name="name" id="name" value="Graphic Design" readonly>
+                        <input type="text" name="softwareDevelopment" id="softwareDevelopment" value="Software Development" readonly>
+                        <input type="text" name="userExperience" id="userExperience" value="User Experience" readonly>
+                        <input type="text" name="graphicDesign" id="graphicDesign" value="Graphic Design" readonly>
                     </div>
+                    <button id="step-one-button" type="submit" class="button-container">Continue</button>
                 </form>
-                <!-- <section>
-                    Step 2
-                </section>
-                <section>
-                    Step 3
-                </section> -->
             </div>
-            <button type="submit" class="button-container">Action</button>
         </section>
         <div class="stepper-container">
             Stepper
         </div>
     </main>
+    <script type="module" src="/assets/js/index.js"></script>
 </body>
 </html>

@@ -25,6 +25,10 @@ html {
     box-sizing: border-box;
 }
 
+.hidden {
+    display: none;
+}
+
 /* SVG Corner */
 
 .svg-corner {
@@ -81,6 +85,13 @@ html {
 
 }
 
+.card-content li.error-message {
+    font-size: 0.75rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--button-secondary-color);
+}
+
 .button-container {
     align-self: center;
     border: none;
@@ -92,6 +103,11 @@ html {
     border-radius: 25px;
     color: var(--font-color);
     background: linear-gradient(to bottom, var(--button-secondary-color), var(--button-primary-color)  90%);
+}
+
+.button-container:hover {
+    background: linear-gradient(to bottom, var(--button-primary-color), var(--button-secondary-color) 90%);
+    cursor: pointer;
 }
 
 .stepper-container {
@@ -131,6 +147,7 @@ input:focus, .field-section-error {
 .step-one input {
     background-color: transparent;
     border: 2px solid var(--card-secondary-color);
+    color: var(--font-color);
 }
 
 .step-one input::placeholder {
@@ -138,6 +155,10 @@ input:focus, .field-section-error {
 }
 
 .step-one input:focus {
+    border: 2px solid var(--button-primary-color);
+}
+
+.step-one input.error {
     border: 2px solid var(--button-primary-color);
 }
 
