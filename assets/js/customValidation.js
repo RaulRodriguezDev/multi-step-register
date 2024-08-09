@@ -16,8 +16,7 @@ const validateUserName = ( nameInput ) => {
 
     if(!nameRegex.test(value)) {
         nameInput.classList.add('error')
-        globalElements.errorList.querySelector(`#${id}`) == null &&
-            globalElements.errorList.append(createLiElement('Invalid Name', id))
+        globalElements.errorList.querySelector(`#${id}`) === null && globalElements.errorList.append(createLiElement('Invalid Name', id))   
     }
     else {
         nameInput.classList.remove('error')
@@ -32,7 +31,7 @@ const validateEmail = ( emailInput ) => {
 
     if(!emailRegex.test(value)) {
         emailInput.classList.add('error')
-        globalElements.errorList.append(createLiElement('Invalid Email', id))
+        globalElements.errorList.querySelector(`#${id}`) === null && globalElements.errorList.append(createLiElement('Invalid Email', id))
     }
     else {
         emailInput.classList.remove('error')
