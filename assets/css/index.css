@@ -100,3 +100,66 @@ html {
     align-items: center;
     margin-top: 20px;
 }
+
+/* Cards */
+
+.field-section {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.field-section p {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+
+input {
+    height: 45px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.75rem;
+    font-family: 'inter', sans-serif;
+}
+
+input:focus, .field-section-error {
+    outline: none;
+    color: var(--font-color);
+}
+
+/* Step 1 */
+
+.step-one input {
+    background-color: transparent;
+    border: 2px solid var(--card-secondary-color);
+}
+
+.step-one input::placeholder {
+    color: var(--card-secondary-color);
+}
+
+.step-one input:focus {
+    border: 2px solid var(--button-primary-color);
+}
+
+/* Step 2 */
+
+.step-two input{
+    margin-top: 10px;
+    background-color: rgba(77, 85, 98, 0.3);
+    border: 1px solid var(--card-secondary-color);
+    color: rgba(229, 231, 235, 0.8);
+    font-weight: 100;
+}
+
+.step-two input:hover {
+    background-color: var(--button-secondary-color);
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+.step-two input.selected {
+    background-color: var(--button-secondary-color);
+    color: var(--font-color);
+    font-weight: 500;
+}
+

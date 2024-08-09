@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/multi-step-register/assets/css/index.css" rel="stylesheet">
+    <link href="assets/css/index.css" rel="stylesheet">
     <title>Multi Step Register</title>
 </head>
 <body>
-    <img src="/multi-step-register/assets/images/blur-bg.svg" alt="right-corner-blur" class="svg-corner svg-corner-left svg-corner-top">
-    <img src="/multi-step-register/assets/images/blur-bg.svg" alt="left-corner-blur" class="svg-corner svg-corner-right svg-corner-bottom">
+    <img src="/assets/images/blur-bg.svg" alt="right-corner-blur" class="svg-corner svg-corner-left svg-corner-top">
+    <img src="/assets/images/blur-bg.svg" alt="left-corner-blur" class="svg-corner svg-corner-right svg-corner-bottom">
     <main class="layout">
         <section class="card-container">
             <div class="card-content">
                 <h4>Step Title</h4>
-                <section>
-                    Step1
-                </section>
-                <section>
+                <form id="card-step-one">
+                    <div class="field-section step-one">
+                        <p>Name</p>
+                        <input type="text" name="name" id="name" placeholder="enter your name">
+                    </div>
+                    <div class="field-section step-one">
+                        <p>Email</p>
+                        <input type="text" name="email" id="email" placeholder="example@gmail.com">
+                    </div>
+                </form>
+                <form id="card-step-two">
+                    <div class="field-section step-two">
+                        <input type="text" name="name" id="name" value="Software Development" readonly>
+                        <input type="text" name="name" id="name" value="User Experience" readonly>
+                        <input type="text" name="name" id="name" value="Graphic Design" readonly>
+                    </div>
+                </form>
+                <!-- <section>
                     Step 2
                 </section>
                 <section>
                     Step 3
-                </section>
+                </section> -->
             </div>
-            <button class="button-container">Action</button>
+            <button type="submit" class="button-container">Action</button>
         </section>
         <div class="stepper-container">
             Stepper
