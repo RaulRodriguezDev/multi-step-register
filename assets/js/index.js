@@ -1,10 +1,12 @@
 import { validateEmail, validateTopicSelected, validateUserName } from "./customValidation.js"
-import { cardOneElements, cardTwoOptions, globalElements, stepOneValues, stepTwoValues } from "./models.js"
-import { getCardOneElements, getCardTwoElements, handleClick } from "./helpers.js"
+import { cardOneElements, cardTwoOptions, globalElements, stepOneValues, stepTwoValues, steps } from "./models.js"
+import { getCardOneElements, getCardTwoElements, handleClick, setStep } from "./helpers.js"
 
 window.addEventListener('load', () => {
     getCardOneElements(cardOneElements)
     getCardTwoElements(cardTwoOptions)
+    setStep(1)
+
     globalElements.errorList = document.querySelector('#error-list')
     globalElements.stepOneForm = document.querySelector('#card-step-one')
     globalElements.stepTwoForm = document.querySelector('#card-step-two')
@@ -14,6 +16,7 @@ window.addEventListener('load', () => {
     globalElements.summaryTopicsField = document.querySelector('#summary-topics')
     globalElements.toast = document.querySelector('#toast-notification')
     globalElements.toastButton = document.querySelector('#toast-button')
+    globalElements.cardTitle = document.querySelector('#card-title')
 
     cardOneElements.userName.addEventListener('blur', (event) => validateUserName(event.target))
     cardOneElements.email.addEventListener('blur', (event) => validateEmail(event.target))
@@ -34,6 +37,7 @@ window.addEventListener('load', () => {
             stepOneValues.email = email.value
             event.target.classList.add('hidden')
             globalElements.stepTwoForm.classList.remove('hidden')
+            setStep(2)
         }
 
         console.log(stepOneValues)
@@ -48,6 +52,7 @@ window.addEventListener('load', () => {
             globalElements.stepThreeForm.classList.remove('hidden')
             globalElements.summaryNameField.textContent = stepOneValues.userName
             globalElements.summaryEmailField.textContent = stepOneValues.email
+            setStep(3)
 
             for(const topic in stepTwoValues) {
                 if(stepTwoValues[topic]) {

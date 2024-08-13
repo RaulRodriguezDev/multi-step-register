@@ -98,6 +98,38 @@ html {
     right: -50vw;
 }
 
+/* Stepper */
+.stepper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stepper-container label {
+    font-size: 0.75rem;
+    color: var(--card-secondary-color);
+}
+
+.stepper-content {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+.stepper-step {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--card-secondary-color);
+    color: var(--font-color);
+    font-size: 0.75rem;
+}
+
+.stepper-step.active {
+    background-color: var(--button-primary-color);
+    box-shadow:  0px 0 10px var(--button-secondary-color);
+}
+
 /* Container and Layout */
 .layout {
     display: flex;
@@ -233,7 +265,11 @@ input:focus, .field-section-error {
     font-weight: 500;
 }
 
-/* Step 4 */
+/* Step 3 */
+
+.summary-section {
+    margin-top: 25px;
+}
 .summary-field {
     margin-bottom: 10px;
     display: flex;
@@ -254,5 +290,24 @@ input:focus, .field-section-error {
 
 .topics-field ul {
     margin-left: 25px;
-    margin-top: 15px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    .layout {
+        width: 80%;
+    }
+}
+
+@media screen and (650px <= width <= 1020px) {
+    .layout {
+        width: 60%;
+    }
+    
+}
+@media screen and (min-width: 1020px) {
+    .layout {
+        width: 40%;
+    }
+    
 }

@@ -38,17 +38,19 @@
                     </div>
                 </form>
                 <form class="hidden" id="card-step-three">
-                    <div class="summary-field">
-                        <label>Name:</label>
-                        <p id="summary-name">Raul</p>
-                    </div>
-                    <div class="summary-field">
-                        <label>Email:</label>
-                        <p id="summary-email"></p>
-                    </div>
-                    <div class="topics-field">
-                        <label>Topics:</label>
-                        <ul id="summary-topics"></ul>
+                    <div class="summary-section">
+                        <div class="summary-field">
+                            <label>Name:</label>
+                            <p id="summary-name"></p>
+                        </div>
+                        <div class="summary-field">
+                            <label>Email:</label>
+                            <p id="summary-email"></p>
+                        </div>
+                        <div class="topics-field">
+                            <label>Topics:</label>
+                            <ul id="summary-topics"></ul>
+                        </div>
                     </div>
                     <div class="button-container" style="display:flex; justify-content:center;">
                         <button type="submit" class="button-container">Continue</button>
@@ -57,7 +59,12 @@
             </div>
         </section>
         <div class="stepper-container">
-            Stepper
+            <label id="stepper-label"></label>
+            <div id="stepper-content" class="stepper-content">
+                <span id="step-1" class="stepper-step active"></span>
+                <span id="step-2" class="stepper-step"></span>
+                <span id="step-3" class="stepper-step"></span>
+            </div>
         </div>
         <div id="toast-notification" class="hidden">
             <div class="toast-content">

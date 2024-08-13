@@ -1,4 +1,4 @@
-import { cardTwoOptions, stepTwoValues } from "./models.js"
+import { cardTwoOptions, stepTwoValues, steps } from "./models.js"
 
 const getCardOneElements = (cardOneElements) => {
     cardOneElements.userName = document.querySelector('#name')
@@ -25,4 +25,9 @@ const handleClick = (event) => {
     }
 }
 
-export { getCardOneElements, getCardTwoElements, handleClick }
+const setStep  = ( step ) => {
+    document.querySelector('#card-title').textContent = steps[step - 1]
+    document.querySelector('#stepper-label').textContent = `Step ${step} of 3`
+    document.querySelector(`#step-${step}`).classList.add('active')
+}
+export { getCardOneElements, getCardTwoElements, handleClick, setStep }

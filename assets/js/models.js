@@ -13,4 +13,6 @@ const stepTwoValues = {
     'graphicDesign': null,
 }
 
-export { cardOneElements, cardTwoOptions, globalElements, stepOneValues, stepTwoValues }
+const steps = ['Register', 'Select Topics', 'Summary']
+
+export { cardOneElements, cardTwoOptions, globalElements, stepOneValues, stepTwoValues, steps }
