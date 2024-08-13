@@ -8,9 +8,9 @@ const stepOneValues = {
 }
 
 const stepTwoValues = {
-    'softwareDevelopment': false,
-    'userExperience': false,
-    'graphicDesign': false,
+    'softwareDevelopment': null,
+    'userExperience': null,
+    'graphicDesign': null,
 }
 
 export { cardOneElements, cardTwoOptions, globalElements, stepOneValues, stepTwoValues }

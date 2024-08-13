@@ -9,6 +9,11 @@ window.addEventListener('load', () => {
     globalElements.stepOneForm = document.querySelector('#card-step-one')
     globalElements.stepTwoForm = document.querySelector('#card-step-two')
     globalElements.stepThreeForm = document.querySelector('#card-step-three')
+    globalElements.summaryNameField = document.querySelector('#summary-name')
+    globalElements.summaryEmailField = document.querySelector('#summary-email')
+    globalElements.summaryTopicsField = document.querySelector('#summary-topics')
+    globalElements.toast = document.querySelector('#toast-notification')
+    globalElements.toastButton = document.querySelector('#toast-button')
 
     cardOneElements.userName.addEventListener('blur', (event) => validateUserName(event.target))
     cardOneElements.email.addEventListener('blur', (event) => validateEmail(event.target))
@@ -38,8 +43,29 @@ window.addEventListener('load', () => {
         event.preventDefault()
         const isValid = validateTopicSelected()
 
-        isValid && event.target.classList.add('hidden')
-        globalElements.stepThreeForm.classList.remove('hidden')
+        if(isValid) {
+            event.target.classList.add('hidden')
+            globalElements.stepThreeForm.classList.remove('hidden')
+            globalElements.summaryNameField.textContent = stepOneValues.userName
+            globalElements.summaryEmailField.textContent = stepOneValues.email
+
+            for(const topic in stepTwoValues) {
+                if(stepTwoValues[topic]) {
+                    const li = document.createElement('li')
+                    li.textContent = stepTwoValues[topic]
+                    globalElements.summaryTopicsField.append(li)
+            }
+        }
+    }})
+
+    globalElements.stepThreeForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        globalElements.toast.classList.remove('hidden')
+        globalElements.toast.classList.add('toast-container')
+    })
+
+    globalElements.toastButton.addEventListener('click', () => {
+        window.location.reload()
     })
 
 })

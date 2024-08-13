@@ -37,16 +37,34 @@
                         <button type="submit" class="button-container">Continue</button>
                     </div>
                 </form>
-                <div class="hidden" id="card-step-three">
-                    <p>Thank you for registering</p>
+                <form class="hidden" id="card-step-three">
+                    <div class="summary-field">
+                        <label>Name:</label>
+                        <p id="summary-name">Raul</p>
+                    </div>
+                    <div class="summary-field">
+                        <label>Email:</label>
+                        <p id="summary-email"></p>
+                    </div>
+                    <div class="topics-field">
+                        <label>Topics:</label>
+                        <ul id="summary-topics"></ul>
+                    </div>
                     <div class="button-container" style="display:flex; justify-content:center;">
                         <button type="submit" class="button-container">Continue</button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
         <div class="stepper-container">
             Stepper
+        </div>
+        <div id="toast-notification" class="hidden">
+            <div class="toast-content">
+                <label>&#x2714;</label>
+                <p id="toast-message">Success</p>
+            </div>
+            <button id="toast-button" type="button">Ok</button>
         </div>
     </main>
     <script type="module" src="/assets/js/index.js"></script>

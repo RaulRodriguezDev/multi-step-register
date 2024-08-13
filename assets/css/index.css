@@ -29,6 +29,51 @@ html {
     display: none;
 }
 
+/* Toast */
+
+.toast-container {
+    position: fixed;
+    width: 30vw;
+    height: 20vh;
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    flex-direction: column;
+}
+
+.toast-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.toast-content label {
+    padding-bottom: 0;
+    color: green;
+}
+
+.toast-container button {
+    margin-top: 10px;
+    border: none;
+    font-family: inherit;
+    font-size: 0.875rem;
+    padding: 14px 38px;
+    border-radius: 25px;
+    color: var(--font-color);
+    background: linear-gradient(to bottom, var(--button-secondary-color), var(--button-primary-color)  90%);
+}
+
+.toast-container button:hover {
+    background: linear-gradient(to bottom, var(--button-primary-color), var(--button-secondary-color) 90%);
+    cursor: pointer;
+}
+
 /* SVG Corner */
 
 .svg-corner {
@@ -188,3 +233,26 @@ input:focus, .field-section-error {
     font-weight: 500;
 }
 
+/* Step 4 */
+.summary-field {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.summary-field label {
+    color: rgba(229, 231, 235, 0.5);
+}
+
+.topics-field {
+    margin-top: 25px;
+}
+
+.topics-field label {
+    color: rgba(229, 231, 235, 0.5);
+}
+
+.topics-field ul {
+    margin-left: 25px;
+    margin-top: 15px;
+}

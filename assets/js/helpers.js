@@ -17,11 +17,11 @@ const handleClick = (event) => {
 
     if(cardTwoOptions[name].classList.contains('selected')) {
         cardTwoOptions[name].classList.remove('selected')
-        stepTwoValues[name] = false
+        stepTwoValues[name] = null
     }
     else{
         cardTwoOptions[name].classList.add('selected')
-        stepTwoValues[name] = true
+        stepTwoValues[name] = value
     }
 }
 

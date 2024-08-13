@@ -42,8 +42,9 @@ const validateEmail = ( emailInput ) => {
 
 const validateTopicSelected = () => {
     const options = Object.values(stepTwoValues)
+    console.log(options)
 
-    if(options.every(option => !option)) {
+    if(options.every(option => option === null)) {
         globalElements.errorList.append(createLiElement('Select at least one topic', 'topic-error'))
         return false
     }
